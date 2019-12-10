@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+     <!-- 引入vue的核心外部文件 -->
+     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+        <div id="app">
+                <input type="radio" value="true" name="star" v-model="show"/>千玺
+               
+                <!-- show的值是false，false不等于true，所以不显示图片，点击后show的值为true，百度搜图片，复制地址 -->
+                <img v-show="show=='true'" style="width:200px;height:150px;" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1575966937&di=65b44ae54722328b8f204b6ea36898a4&src=http://picture.ik123.com/uploads/allimg/180412/12-1P412134126.jpg"/>
+               
+                <!-- <img v-if="show=='true'" style="width:200px;height:150px;"src=""/> -->
+            </div>
+            <script>
+                var app=new Vue({
+                    el:"#app",
+                    data:{
+                        show:'false'
+                        
+                    }
+                });
+                </script>
+</body>
+</html>
